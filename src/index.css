@@ -11,3 +11,19 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.cardGrid {
+  display: grid;
+  grid-template-columns: auto 500px;
+  column-gap: 10px;
+  width: 100%;
+}
+
+@media only screen and (max-width: 825px) {
+  .cardGrid {
+    display: grid;
+    grid-template-columns: 100%;
+    row-gap: 20px;
+    width: 100%;
+  }
+}

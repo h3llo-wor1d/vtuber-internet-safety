@@ -34,19 +34,19 @@ export default function Page2(props) {
                 </CardContent>
             </Card>
             <Card sx={{width: "100%"}}>
-                <CardContent>
-                    <Typography variant="h5" component="div">
-                        Example of a Real QR Login Prompt
-                    </Typography>
-                    <br/>
+                <CardContent className="cardGrid">
+                    <div>
+                        <Typography variant="h5" component="div">
+                            Example of a Real QR Login Prompt
+                        </Typography>
+                    </div>
                     <Slideshow images={[
                         "assets/discord/loginpage_example.png",
-                        "assets/discord/mobile_login_prompt.jpg"
-                    ]} />
-                    <Typography variant="body2" color="text.secondary">
-                        The images above are the real Discord 
-                        pages (desktop and mobile, set to my account) for QR Auth.
-                    </Typography>
+                        "assets/discord/mobile_login_prompt.png"
+                    ]} descriptions={[
+                        "The actual login page you will receive on desktop, with a QR code to scan",
+                        "The prompt you receive on mobile to confirm you are trying to sign in after scanning a QR code"
+                    ]}/>
                 </CardContent>
             </Card>
         </Box>   

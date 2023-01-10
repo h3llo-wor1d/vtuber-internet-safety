@@ -6,6 +6,7 @@ import './index.css';
 // Page imports
 import Home from './pages/home';
 import Discord from './pages/discord';
+import Twitter from './pages/twitter';
 
 import { ThemeProvider, createTheme } from '@mui/material/styles';
 import CssBaseline from '@mui/material/CssBaseline';
@@ -24,6 +25,7 @@ root.render(
     <Routes>
       <Route path="/" element={<Home />} />
       <Route path="/discord" element={<Discord />} />
+      <Route path="/twitter" element={<Twitter />} />
     </Routes>
     </BrowserRouter>
   </ThemeProvider>

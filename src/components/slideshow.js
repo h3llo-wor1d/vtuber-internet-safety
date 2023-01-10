@@ -1,4 +1,4 @@
-import { Pagination } from "@mui/material";
+import { Card, CardMedia, Pagination, Stack, Typography } from "@mui/material";
 import { useState } from "react";
 
 function mobileCheck() {
@@ -13,22 +13,19 @@ export default function Slideshow(props) {
     const isMobile = true;
 
     const handleChange = (event, value) => {
-        console.log(value);
+        setCurrentImage(value-1);
     };
 
     return (
-        <div>
-            {
-            isMobile ? 
-            <div>
-                <Pagination count={props.images.length} onChange={handleChange}/>
-            </div>
-            : 
-            <>
-                <img src={props.images[currentImage]} style={{maxHeight: "300px", minHeight: "200px"}} alt={currentImage} />
-                <img src={props.images[currentImage+1]} style={{height: "300px"}} alt={currentImage+1} />
-            </>
-            }
-        </div>
+        <Card sx={{maxWidth: "450px", float: "right"}}>
+            <CardMedia component="img" image={props.images[currentImage]} />
+            <Typography variant="body2" color="text.secondary" sx={{textAlign: "center", marginTop: "5px", marginBottom: "5px"}}>
+                {props.descriptions[currentImage]}
+            </Typography>
+            <Stack alignItems="center">
+                <Pagination count={props.images.length} onChange={handleChange} />
+            </Stack>   
+            <div style={{marginTop: "10px"}} />
+        </Card>
     )
 }

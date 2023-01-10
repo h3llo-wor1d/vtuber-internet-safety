@@ -1,7 +1,7 @@
 import { Breadcrumbs, Link, Typography } from "@mui/material";
 import { Component } from "react";
-import Page1 from './subpages/discord/1';
-import Page2 from "./subpages/discord/2";
+import Page1 from './subpages/twitter/1';
+import Page2 from "./subpages/twitter/2";
 
 
 const pageMap = [
@@ -9,7 +9,7 @@ const pageMap = [
     <Page2 />
 ]
 
-export default class Discord extends Component {
+export default class Twitter extends Component {
     state = {pageNumber: 0}
     
     render() {
@@ -29,7 +29,7 @@ export default class Discord extends Component {
                         color={this.state.pageNumber === 1 ? "text.primary" : "inherit"}
                         onClick={() => {this.setState({pageNumber: 1})}}
                     >
-                        QR Code Scams
+                        Instagram "Hack"
                     </Link>
                 </Breadcrumbs>
                 {pageMap[this.state.pageNumber]}
