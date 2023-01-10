@@ -5,7 +5,10 @@ export default class Home extends Component {
     render() {
         return (
             <div style={{position: "absolute", width: "75%", left: "50%", top: "50%", transform: "translate(-50%, -50%)"}}>
-                <h2 style={{textAlign: 'center'}}>Welcome to the VTuber Internet Safety Course.</h2><br/>
+                <div style={{width: "100%",textAlign: 'center'}}>
+                    <img src="assets/icon_large.png" style={{ width: "300px"}} alt="icon_large" />
+                </div>
+                <br/>
                 I never thought in 2023 people would fall for some basic scams, but here we are, I guess...
                 I decided to stop complaining about the fact that people were falling for them, and instead
                 devote hundreds of hours into my time into making a course for VTubers like YOU to educate
